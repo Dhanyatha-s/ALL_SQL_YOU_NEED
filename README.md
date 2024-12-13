@@ -41,7 +41,8 @@ INSERT INTO Orders (CustomerID, Product, Quantity, Price, OrderDate) VALUES
 (1, 'Keyboard', 2, 100.00, '2024-03-10'),
 (4, 'Laptop', 1, 800.00, '2024-03-20');
 ```
-> ####-- SELECT STATEMENT-- 
+## -- SELECT STATEMENT--
+
 #### 01. Write a query to retrieve all columns from the Customers table
 ```--  select * from Customers```
 
@@ -56,3 +57,149 @@ INSERT INTO Orders (CustomerID, Product, Quantity, Price, OrderDate) VALUES
 
 #### 05. Write a query to fetch the Email of customers who registered in 2024
 ```select Email from Customers where LEFT(RegistrationDate, 4) = '2024' ```
+
+## -- ORDER BY STATEMENT--
+
+
+#### 01. Write a query to list all customers in ascending order of their RegistrationDate.
+```
+SELECT CustomerName, RegistrationDate
+FROM Customers Order By RegistrationDate ASC
+```
+
+#### 02. Retrieve all orders sorted by Price in descending order.
+```
+ select * from Orders order by Price DESC
+```
+
+#### 03. Fetch the names of customers ordered alphabetically by Name.
+```
+select CustomerName from Customers order by CustomerName
+```
+
+#### 04. Retrieve the products ordered by their OrderDate in ascending order.
+```
+select Product, OrderDate from Orders order by OrderDate ASC
+```
+
+#### 05. List all orders sorted by Quantity in descending order and then by Price in ascending order.
+```
+select * from Orders order by Quantity DESC, Price
+```
+
+## -- WHERE  STATEMENT --
+
+#### 01. Write a query to find customers from the USA.
+```
+select CustomerName from Customers where Country = 'USA'
+```
+
+#### 02.Retrieve all orders where the Price is greater than 500.
+```
+select * from Orders where Price > 500
+```
+
+#### 03. Fetch customers who registered before 2024-03-01.
+```
+select CustomerName, RegistrationDate from Customers where RegistrationDate < '2024-03-01'
+```
+
+#### 04.Retrieve orders where the Quantity is equal to 2.
+```
+select * from Orders where Quantity = 2
+```
+
+#### 05. Write a query to fetch all products with a Price less than 300
+```
+select * from Orders where Price < 300
+```
+
+
+## -- COMPARISION OPERATORS --
+
+#### 01. Fetch orders where the Price is between 200 and 800.
+```
+select * from Orders where Price between 200 and 800
+```
+
+#### 02. Find customers whose CustomerID is greater than 2.
+```
+select CustomerName, CustomerID from Customers where CustomerID > 2
+```
+
+-- Retrieve all products where the Quantity is not equal to 1.
+-- select Product, Quantity from Orders where Quantity <> 1
+
+-- Write a query to fetch customers where the Country is not 'Canada'.
+-- select CustomerName from Customers where Country <> 'Canada'
+
+-- Retrieve all orders where Price is equal to or greater than 800.
+-- select * from Orders where Price >= 800
+
+-- LOGICAL OPERATORS --
+
+-- Retrieve orders where the Price is greater than 500 AND Quantity is more than 1.
+-- SELECT * FROM Orders where Price > 500 and Quantity > 1
+
+-- Write a query to fetch customers from the USA OR Canada.
+-- select CustomerName, Country from Customers where Country = 'USA' or Country = 'Canada'
+
+-- Retrieve orders where the Price is less than 800 AND NOT Quantity equal to 1.
+-- select * from Orders where Price < 800 and Quantity <> 1
+
+-- Find customers where the Country is 'USA' OR registered after 2024-02-01.
+-- select CustomerName, Country from Customers where Country = 'USA' or RegistrationDate = '2024-02-01'
+
+-- Fetch orders where the Product is 'Laptop' AND the Price is less than 1000
+-- select * from Orders where Price < 1000 and Product = 'Laptop'
+
+--  BETWEEN --
+
+-- Write a query to find orders with Price between 500 and 1000.
+-- select * from Orders where Price between 500 and 1000
+
+-- Retrieve customers with CustomerID between 2 and 4.
+-- select CustomerName, CustomerID from Customers where CustomerID between 2 and 4
+
+-- Find orders placed between 2024-03-01 and 2024-03-15.
+-- select * from Orders where OrderDate between '2024-03-01' and '2024-03-15'
+
+-- Fetch products with Quantity between 1 and 3.
+-- select Product, Quantity from Orders where Quantity between 1 and 3
+
+-- Retrieve customers who registered between 2024-01-01 and 2024-03-01.
+-- select CustomerName, RegistrationDate from Customers where RegistrationDate between '2024-01-01' and '2024-03-01'
+
+-- IN --
+
+-- Write a query to find customers whose Country is in ('USA', 'Canada').
+-- select CustomerName, Country from Customers where Country in ('USA', 'Canada')
+
+-- Retrieve orders where Product is in ('Laptop', 'Smartphone').
+-- select * from Orders where Product in ('Laptop', 'Smartphone')
+
+-- Fetch customers with CustomerID in (1, 3, 4).
+-- select CustomerName, CustomerID from Customers where CustomerID in (1,3,4)
+
+-- Retrieve orders placed on dates in ('2024-03-01', '2024-03-05').
+-- select * from Orders where OrderDate in ('2024-03-01', '2024-03-05')
+
+-- Fetch products where Price is in (100, 200, 800).
+-- select Product from Orders where Price in (100, 200, 800)
+
+-- LIKE --
+
+-- Find customers whose Email ends with '@gmail.com'.
+-- select CustomerName, Email from Customers where Email like '%@gmail.com'
+
+-- Retrieve customers whose Name starts with 'A'.
+-- select CustomerName from Customers where CustomerName like 'A%'
+
+-- Fetch products where the Product name contains 'phone'.
+-- select Product from Orders where Product like '%Phone%' 
+
+-- Write a query to find orders where the OrderDate contains '2024-03'.
+-- select OrderDate from Orders where OrderDate like '%2024-03_%' 
+
+-- Retrieve customers whose Name contains the letter 'i'.
+-- select CustomerName from Customers where CustomerName like '%i%'
