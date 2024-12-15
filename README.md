@@ -254,3 +254,32 @@ select OrderDate from Orders where OrderDate like '%2024-03_%'
 ```
  select CustomerName from Customers where CustomerName like '%i%'
 ```
+## -- JOINS Concept --
+#### 01. Write a query to combine Customers and Orders tables, displaying CustomerID, Name, and Product.
+```
+select Customers.CustomerID, Customers.CustomerName, Orders.Product from Customers 
+Inner Join  Orders on Customers.CustomerID = Orders.CustomerID
+```
+
+#### 02. Fetch all orders with their corresponding customer names.
+```
+select o.OrderID, o.Product, o.Quantity, o.Price, c.CustomerName from Orders as o 
+Inner Join  Customers as c  on o.CustomerID = c.CustomerID
+```
+
+#### 03. Retrieve customers who have placed at least one order.
+```
+select o.OrderID, o.Quantity,  C.CustomerName from Customers as C join Orders as o on C.CustomerID = o.CustomerID where o.Quantity = 1
+```
+
+#### 04. List all customers along with their OrderID, even if they haven't placed any orders.
+```
+select c.customerID, c.CustomerName, o.OrderID from Customers as c join Orders as o on c.CustomerID = o.CustomerID
+```
+
+#### 05. Display all orders, including customers from the Customers table who have no orders.
+```
+select c.CustomerID, c.CustomerName, o.OrderID, o.Product, o.Quantity, o.Price from Customers as c Left join Orders as o on c.CustomerID = o.OrderID
+```
+
+
