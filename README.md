@@ -282,4 +282,4 @@ select c.customerID, c.CustomerName, o.OrderID from Customers as c join Orders a
 select c.CustomerID, c.CustomerName, o.OrderID, o.Product, o.Quantity, o.Price from Customers as c Left join Orders as o on c.CustomerID = o.OrderID
 ```
 
-
+# IF YOU HAVE CAME HERE KUDOOS💪😁💪 NOW GO TO THE FILE FOR INTERMEDIATE PRACTICES
