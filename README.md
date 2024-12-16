@@ -1,6 +1,8 @@
 # ALL_SQL_YOU_NEED
 Learn  SQL by Querying
 
+> # Get All the Query Questions here Clcik on Link
+
 ## Here is the SQL SCRIPT
 
 >### Step 1: Create Database SQLTUTORIAL
