@@ -1,45 +1,45 @@
 # <b> Questions for Each Concept 
 1. SQL SELECT
-Write a query to retrieve all columns from the Customers table.
-Write a query to retrieve the Name and Country of all customers.
-Write a query to fetch all orders made after 2024-03-01.
-Retrieve only the Product and Price from the Orders table.
-Write a query to fetch the Email of customers who registered in 2024.
+Write a query to retrieve all columns from the Customers table.  
+Write a query to retrieve the Name and Country of all customers.   
+Write a query to fetch all orders made after 2024-03-01.  
+Retrieve only the Product and Price from the Orders table.  
+Write a query to fetch the Email of customers who registered in 2024.  
 
 # 2. SQL DISTINCT
-Write a query to fetch distinct countries from the Customers table.
-Retrieve distinct products from the Orders table.
-Find the distinct registration dates of customers.
-Fetch distinct combinations of CustomerID and OrderDate from the Orders table.
-Write a query to retrieve all distinct prices from the Orders table.
+Write a query to fetch distinct countries from the Customers table.  
+Retrieve distinct products from the Orders table.  
+Find the distinct registration dates of customers.   
+Fetch distinct combinations of CustomerID and OrderDate from the Orders table.  
+Write a query to retrieve all distinct prices from the Orders table.  
 
 # 3. SQL ORDER BY
-Write a query to list all customers in ascending order of their RegistrationDate.
-Retrieve all orders sorted by Price in descending order.
-Fetch the names of customers ordered alphabetically by Name.
-Retrieve the products ordered by their OrderDate in ascending order.
-List all orders sorted by Quantity in descending order and then by Price in ascending order.
+Write a query to list all customers in ascending order of their RegistrationDate.  
+Retrieve all orders sorted by Price in descending order.    
+Fetch the names of customers ordered alphabetically by Name.  
+Retrieve the products ordered by their OrderDate in ascending order.  
+List all orders sorted by Quantity in descending order and then by Price in ascending order.  
 
 # 4. SQL WHERE
-Write a query to find customers from the USA.
-Retrieve all orders where the Price is greater than 500.
-Fetch customers who registered before 2024-03-01.
-Retrieve orders where the Quantity is equal to 2.
-Write a query to fetch all products with a Price less than 300.
+Write a query to find customers from the USA.  
+Retrieve all orders where the Price is greater than 500.     
+Fetch customers who registered before 2024-03-01.  
+Retrieve orders where the Quantity is equal to 2.  
+Write a query to fetch all products with a Price less than 300.  
 
 # 5. SQL Comparison Operators
-Fetch orders where the Price is between 200 and 800.
-Find customers whose CustomerID is greater than 2.
-Retrieve all products where the Quantity is not equal to 1.
-Write a query to fetch customers where the Country is not 'Canada'.
-Retrieve all orders where Price is equal to or greater than 800.
+Fetch orders where the Price is between 200 and 800.  
+Find customers whose CustomerID is greater than 2.  
+Retrieve all products where the Quantity is not equal to 1.  
+Write a query to fetch customers where the Country is not 'Canada'.  
+Retrieve all orders where Price is equal to or greater than 800.  
 
 # 6. SQL Logical Operators (AND, OR, NOT)
-Retrieve orders where the Price is greater than 500 AND Quantity is more than 1.
-Write a query to fetch customers from the USA OR Canada.
-Retrieve orders where the Price is less than 800 AND NOT Quantity equal to 1.
-Find customers where the Country is 'USA' OR registered after 2024-02-01.
-Fetch orders where the Product is 'Laptop' AND the Price is less than 1000.
+Retrieve orders where the Price is greater than 500 AND Quantity is more than 1.  
+Write a query to fetch customers from the USA OR Canada.  
+Retrieve orders where the Price is less than 800 AND NOT Quantity equal to 1.  
+Find customers where the Country is 'USA' OR registered after 2024-02-01.  
+Fetch orders where the Product is 'Laptop' AND the Price is less than 1000.  
 
 # 7. SQL BETWEEN
 Write a query to find orders with Price between 500 and 1000.
