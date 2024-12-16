@@ -1,7 +1,7 @@
 # ALL_SQL_YOU_NEED
 Learn  SQL by Querying
 
-> # Get All the Query Questions here  [Clcik on Link](http://url.com)
+> # Get All the Query Questions here  [Clcik on Link](https://github.com/Dhanyatha-s/ALL_SQL_YOU_NEED/blob/main/QUERIES.md)
 
 
 ## Here is the SQL SCRIPT
