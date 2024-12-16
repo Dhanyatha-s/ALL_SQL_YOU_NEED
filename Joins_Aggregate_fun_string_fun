@@ -1,0 +1,113 @@
+-- #### 01. Write a query to perform a RIGHT JOIN to show all orders and their corresponding customers, if any.
+```
+select o.OrderID, c.CustomerName, o.Product, o.Quantity, o.Price from Customers as c right join Orders as o on c.CustomerID = o.customerID
+```
+-- Display all orders and their CustomerID, even if the CustomerID doesn't exist in the Customers table.
+```
+select o.OrderID,  o.CustomerID, c.CustomerID, o.Product, o.Quantity, o.Price from Orders as o 
+Right join  Customers as c  on c.CustomerID = o.customerID
+```
+-- Retrieve all OrderID and Name for matching rows between the two tables. Inner Join
+-- Fetch CustomerID and OrderDate for all orders, even if no matching customer exists. - left join
+-- Show all OrderID and their respective Country for matching records. - Inner join 
+
+-- Write a query to perform a FULL JOIN to show all customers and their orders, including unmatched rows.
+SELECT 
+    c.CustomerName, 
+    o.OrderID, 
+    o.Product, 
+    o.Quantity, 
+    o.Price
+FROM 
+    Customers AS c
+LEFT JOIN 
+    Orders AS o
+ON 
+    c.CustomerID = o.CustomerID
+
+UNION
+
+SELECT 
+    c.CustomerName, 
+    o.OrderID, 
+    o.Product, 
+    o.Quantity, 
+    o.Price
+FROM 
+    Customers AS c
+RIGHT JOIN 
+    Orders AS o
+ON 
+    c.CustomerID = o.CustomerID;
+
+-- Display all customers and orders, including rows with no matches on either side.
+-- Retrieve CustomerID, Name, and Product from both tables, with unmatched rows displayed as NULL.
+-- Find customers who do not have orders and orders that are not associated with any customer.
+```
+SELECT 
+    Customers.CustomerID,
+    Customers.CustomerName
+FROM 
+    Customers
+LEFT JOIN 
+    Orders
+ON 
+    Customers.CustomerID = Orders.CustomerID
+WHERE 
+    Orders.OrderID IS NULL;
+```
+-- Write a query to combine Customers and Orders showing Name and OrderDate, even if no matches exist.
+-- UNION 
+#### 01. Combine the Name column from Customers with the Product column from Orders using UNION
+```
+SELECT 
+    Customers.CustomerName, 
+    Orders.Product
+FROM 
+    Customers
+left join Orders on Customers.CustomerID = Orders.CustomerID
+UNION
+SELECT 
+    Customers.CustomerName, 
+    Orders.Product
+FROM 
+    Orders
+Right join Customers on Orders.CustomerID = Customers.CustomerID
+```
+-- Fetch all Country values from Customers and Product names from Orders, eliminating duplicates
+```
+select  c.Country, o.Product from Customers as c left join Orders as o on c.CustomerID = o.CustomerID
+Union 
+select c.Country, o.Product from Orders as o Right join Customers as c on o.CustomerID = c.CustomerID
+```
+-- AGGRIGATE FUNCTIONS
+-- Write a query to calculate the total Price of all orders.
+-- Select sum(price) as Total_Price from Orders
+
+-- Find the average Price of all orders.
+-- Select AVG(price) as AVG_Price from Orders
+
+-- Count the total number of customers in the Customers table.
+-- Select Count(CustomerName) as Total_Customers from Customers
+
+-- Find the maximum Price from the Orders table.
+-- Select max(price) as Max_Price from Orders
+
+-- Retrieve the minimum RegistrationDate from the Customers table.
+-- Select Min(RegistrationDate) as Min_Registration from Customers
+
+-- SQL String Functions
+-- Write a query to convert the Name column in Customers to uppercase.
+-- select Upper(CustomerName) as Names from Customers
+ 
+-- Retrieve the first three characters of all Product names in the Orders table.
+-- select substring(CustomerName, 1, 3) as Names from Customers
+
+-- Concatenate the Name and Country columns in the Customers table.
+-- select CONCAT(CustomerName,' ', Country) as Names_Country from Customers
+
+-- Find the length of the Email column for all customers.
+-- select Length(Email) as Len_email from Customers
+
+-- Replace '@gmail.com' with '@example.com' in the Email column.
+-- select  replace(Email, '@gmail.com','@example.com') as UpdatedEmail from Customers
