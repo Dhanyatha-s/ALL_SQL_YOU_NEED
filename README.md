@@ -1,7 +1,8 @@
 # ALL_SQL_YOU_NEED
 Learn  SQL by Querying
 
-> # Get All the Query Questions here Clcik on Link
+> # Get All the Query Questions here  [Clcik on Link](http://url.com)
+
 
 ## Here is the SQL SCRIPT
 
