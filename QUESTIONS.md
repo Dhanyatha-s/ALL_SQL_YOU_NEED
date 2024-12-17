@@ -41,3 +41,14 @@ select first_name, last_name Into People_of_London
 from Customer
 where Country = 'London'
 ```
+## Temporary Table
+
+#### 01. Create a temporary table to store customers with orders above 1000.
+
+```
+CREATE TEMPORARY TABLE HighValueCustomers AS
+SELECT CustomerID, SUM(Price) AS TotalSpent
+FROM Orders
+GROUP BY CustomerID
+HAVING TotalSpent > 1000;
+```
