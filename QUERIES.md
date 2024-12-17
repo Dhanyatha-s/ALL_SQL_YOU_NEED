@@ -119,11 +119,11 @@ Find the maximum Price from the Orders table.
 Retrieve the minimum RegistrationDate from the Customers table.   
 
 # 18. SQL String Functions
-Write a query to convert the Name column in Customers to uppercase.
-Retrieve the first three characters of all Product names in the Orders table.
-Concatenate the Name and Country columns in the Customers table.
-Find the length of the Email column for all customers.
-Replace '@gmail.com' with '@example.com' in the Email column.
+Write a query to convert the Name column in Customers to uppercase.  
+Retrieve the first three characters of all Product names in the Orders table.  
+Concatenate the Name and Country columns in the Customers table.  
+Find the length of the Email column for all customers.  
+Replace '@gmail.com' with '@example.com' in the Email column.  
 
 # 19. SQL GROUP BY
 Write a query to group orders by Product and count how many times each product was ordered.  
