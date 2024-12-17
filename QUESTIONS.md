@@ -16,3 +16,28 @@ WHERE condition;
 INSERT INTO Customers (CustomerName, City, Country)
 SELECT SupplierName, City, Country FROM Suppliers;
 ```
+
+## <b>The SELECT INTO statement<b> copies data from one table into a new table.
+
+>SELECT INTO Syntax
+>Copy all columns into a new table:
+```
+SELECT *
+INTO newtable [IN externaldb]
+FROM oldtable
+WHERE condition;
+```
+[Note] its a Alternative to view and  vise versa   
+
+```
+select first_name, last_name
+from Customer
+where Country = 'London'
+```
+if i want this data to a new table i could use select Into function  
+like this  
+```
+select first_name, last_name Into People_of_London
+from Customer
+where Country = 'London'
+```
